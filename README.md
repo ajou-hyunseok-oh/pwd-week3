@@ -164,11 +164,9 @@ git push -u origin main
 
 // 이후 코드 수정 시
 ```bash
-# 현재 폴더를 Git 저장소(Repository)로 초기화(Initialize)
-git init
-
-# 모든 변경 파일을 스테이징(Staging Area)에 추가
 git add .
+
+git commit -m "....."
 
 git push -u origin main
 ```
@@ -1767,7 +1765,7 @@ export default SubmitPage;
 ---
 
 ## 📝 Netlify Forms 설정
-### 1. 폼 요소 추가 (public/index.html)
+### 1. 폼 요소 추가 (index.html)
 ```html
 <!doctype html>
 <html lang="en">
