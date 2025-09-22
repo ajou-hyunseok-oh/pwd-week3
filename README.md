@@ -155,7 +155,7 @@ git commit -m "Init pwd-week3 : React + Vite app"
 git branch -m main
 
 # 원격(Remote) 저장소 'origin' 등록 (GitHub URL로 연결)
-git remote add origin https://github.com/ajou-hyunseok-oh/pwd-week3.git
+git remote add origin https://github.com/<username>/pwd-week3.git
 
 # 로컬 main을 원격 origin/main으로 최초 푸시(Push) (-u: 업스트림(Upstream) 설정)
 #  → 이후에는 git push 만으로도 동일 브랜치에 푸시 가능
@@ -1826,14 +1826,14 @@ export default SubmitPage;
 ### 4. 배포 상태 확인
 
 1. 배포 진행 상황 모니터링 (3-5분 소요)
-2. 성공 시 URL 생성: `https://pwd-week3-[username].netlify.app`
+2. 성공 시 URL 생성: `https://pwd-week3-<username>.netlify.app`
 
 ### 5. 사이트 이름 변경
 
 1. `Site configuration` → `Site details`
 2. `Change site name` 클릭
-3. 원하는 이름 입력: `pwd-week3-yourname`
-4. 새 URL: `https://pwd-week3-yourname.netlify.app`
+3. 원하는 이름 입력: `pwd-week3-<username>`
+4. 새 URL: `https://pwd-week3-<username>.netlify.app`
 
 ### 6. Forms 확인
 
@@ -1887,9 +1887,9 @@ Deploy directory 'dist' does not exist
 ### 마감일
 - 9월 21일 11시 59분 까지
 ### GitHub URL 
-(예: https://github.com/[username]/pwd-week3)
+(예: https://github.com/<username>/pwd-week3)
 ### Netlify App URL 
-(예: https://pwd-week3-[username].netlify.app)
+(예: https://pwd-week3-<username>.netlify.app)
 ### 실습 체크리스트
 - GitHub 저장소에 프로젝트 버전 관리가 바르게 되고 있는가?
 - React로 개발한 컴포넌트와 페이지들이 모두 바르게 동작하는가?
