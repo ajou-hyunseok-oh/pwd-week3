@@ -53,7 +53,7 @@ const fallbackRestaurants = [
   }
 ];
 
-const DEFAULT_BASE_URL = 'https://pwd-week4-<username>.onrender.com';
+const DEFAULT_BASE_URL = 'http://localhost:3000';
 const rawBaseUrl = import.meta.env?.VITE_API_BASE_URL || DEFAULT_BASE_URL;
 const API_BASE_URL = rawBaseUrl.endsWith('/') ? rawBaseUrl.slice(0, -1) : rawBaseUrl;
 
@@ -87,6 +87,21 @@ export const restaurantAPI = {
       console.warn('Using local fallback restaurant list', error);
       return { data: fallbackRestaurants };
     }
+  },
+
+  createRestaurant: async (payload) => {
+    const response = await api.post('/api/restaurants', payload);
+    return response.data;
+  },
+
+  updateRestaurant: async (id, payload) => {
+    const response = await api.put(`/api/restaurants/${id}`, payload);
+    return response.data;
+  },
+
+  deleteRestaurant: async (id) => {
+    const response = await api.delete(`/api/restaurants/${id}`);
+    return response.status;
   },
 
   getRestaurantById: async (id) => {

@@ -11,6 +11,7 @@ import ListPage from './pages/ListPage';
 import DetailPage from './pages/DetailPage';
 import PopularPage from './pages/PopularPage';
 import SubmitPage from './pages/SubmitPage';
+import AdminPage from './pages/AdminPage';
 
 // Components
 import Header from './components/Header';
@@ -43,6 +44,7 @@ function App() {
               <Route path="/restaurant/:id" element={<DetailPage />} />
               <Route path="/popular" element={<PopularPage />} />
               <Route path="/submit" element={<SubmitPage />} />
+              <Route path="/admin" element={<AdminPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
