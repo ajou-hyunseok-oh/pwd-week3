@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import styled from '@emotion/styled';
 import { toast } from 'react-toastify';
-import { restaurantAPI } from '../services/api';
+import { submissionAPI } from '../services/api';
 import { FaCheckCircle } from 'react-icons/fa';
 
 const FormContainer = styled.div`
@@ -135,17 +135,17 @@ function SubmitRestaurant() {
           : [];
 
       const payload = {
-        name: data.restaurantName?.trim(),
+        restaurantName: data.restaurantName?.trim(),
         category: data.category,
         location: data.location?.trim(),
-        // 선택 항목은 공백인 경우 전송하지 않아 백엔드 기본값 사용
         priceRange: data.priceRange?.trim() || undefined,
-        description: data.review?.trim() || undefined,
         recommendedMenu: recommendedMenuArray.length ? recommendedMenuArray : undefined,
-        image: data.image?.trim() || undefined,
+        review: data.review?.trim() || undefined,
+        submitterName: data.submitterName?.trim() || undefined,
+        submitterEmail: data.submitterEmail?.trim() || undefined,
       };
 
-      await restaurantAPI.createRestaurant(payload);
+      await submissionAPI.createSubmission(payload);
       setSubmitted(true);
       toast.success('맛집이 성공적으로 제보되었습니다! 🎉');
       reset();

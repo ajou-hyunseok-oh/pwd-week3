@@ -131,4 +131,23 @@ export const restaurantAPI = {
   },
 };
 
+export const submissionAPI = {
+  createSubmission: async (payload) => {
+    const response = await api.post('/api/submissions', payload);
+    return response.data;
+  },
+  listSubmissions: async (status) => {
+    const response = await api.get('/api/submissions', { params: { status } });
+    return response.data;
+  },
+  updateSubmission: async (id, payload) => {
+    const response = await api.put(`/api/submissions/${id}`, payload);
+    return response.data;
+  },
+  deleteSubmission: async (id) => {
+    const response = await api.delete(`/api/submissions/${id}`);
+    return response.status;
+  },
+};
+
 export default api;

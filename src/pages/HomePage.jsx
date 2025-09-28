@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { FaMapMarkedAlt, FaUtensils, FaStar } from 'react-icons/fa';
+import { FaMapMarkedAlt, FaStar } from 'react-icons/fa';
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -72,11 +72,6 @@ function HomePage() {
           <p>이번 주 가장 인기있는 맛집</p>
         </Card>
         
-        <Card to="/submit">
-          <FaUtensils />
-          <h3>맛집 제보하기</h3>
-          <p>새로운 맛집을 알려주세요</p>
-        </Card>
       </CardGrid>
     </HomeContainer>
   );
