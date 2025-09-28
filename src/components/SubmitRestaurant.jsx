@@ -245,15 +245,7 @@ function SubmitRestaurant() {
           />
         </FormGroup>
 
-        <FormGroup>
-          <Label htmlFor="image">이미지 URL</Label>
-          <Input
-            id="image"
-            {...register("image")}
-            placeholder="예: https://...jpg"
-          />
-        </FormGroup>
-
+        
         <FormGroup>
           <Label htmlFor="review">한줄평</Label>
           <Textarea
