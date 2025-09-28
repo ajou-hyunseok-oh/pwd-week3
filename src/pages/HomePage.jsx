@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from '@emotion/styled';
-import { FaMapMarkedAlt, FaStar } from 'react-icons/fa';
+import { FaMapMarkedAlt, FaUtensils, FaStar } from 'react-icons/fa';
 
 const HomeContainer = styled.div`
   text-align: center;
@@ -66,6 +66,11 @@ function HomePage() {
           <p>카테고리별로 맛집을 찾아보세요</p>
         </Card>
         
+        <Card to="/submit">
+          <FaUtensils />
+          <h3>맛집 제보하기</h3>
+          <p>새로운 맛집을 알려주세요</p>
+        </Card>
         <Card to="/popular">
           <FaStar />
           <h3>인기 맛집 TOP</h3>
